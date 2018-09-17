@@ -1,4 +1,4 @@
 # Graphhhing
 Software Construction
 
-![IMG_0436](/Users/yangyang/Downloads/IMG_0436.JPG)
+![IMG_0436](https://raw.githubusercontent.com/JonySheep/Graphhhing/master/IMG_0436.JPG)
