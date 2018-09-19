@@ -2,7 +2,9 @@
   background-image: url("../assets/background.jpg") ;
   background-size: cover;
   opacity: 0.5;
-  width: 100%;
+  width: 89%;
   height: 100%;
-  padding: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 50px;
 }

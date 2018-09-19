@@ -1,8 +1,8 @@
-import Vue from "vue";
-import Router from 'vue-router';
-import GraphPage from '../pages/GraphPage.vue';
+import Vue from 'vue'
+import Router from 'vue-router'
+import GraphPage from '../pages/GraphPage.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   routes: [
@@ -11,8 +11,8 @@ export default new Router({
       name: 'GraphPage',
       component: GraphPage,
       meta: {
-        title: "Graphhhing"
+        title: 'Graphhhing'
       }
-    },
+    }
   ]
 })
