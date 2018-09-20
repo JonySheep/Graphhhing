@@ -43,7 +43,11 @@ export default {
       context: {},
       thisCanvas: {},
       canvasMoveUse: false, // 是否正在画图
-      isStart: false // 是否是开始画图
+      isStart: true, // 是否是开始画图
+      pointList: [], // 点集
+      lineList: [], // 线集
+      startPoint: {}, // 开始点
+      figureList: [] // 识别的形状集合：需要post给后台
     }
   },
   // 渲染时调用
@@ -74,7 +78,24 @@ export default {
      * @param e actionEvent
      */
     canvasUp (e) {
+      const canvasX = e.offsetX - e.target.offsetLeft
+      const canvasY = e.offsetY - e.target.offsetTop
       this.canvasMoveUse = false
+      if (!this.isStart) {
+        // 不是第一条线，需判断是否能组成形状
+        if (this.isShape) {
+          this.lineList.push(this.pointList)
+          // 判断是否可封闭
+          if (this.isClose(canvasX, canvasY)) {
+            this.recognizeFigure()
+          }
+        } else {
+          this.initData()
+        }
+      } else {
+        // 第一条线，直接加入线段集合
+        this.lineList.push(this.pointList)
+      }
     },
     /**
      * 鼠标移动对应的action
@@ -83,8 +104,13 @@ export default {
     canvasMove (e) {
       if (this.canvasMoveUse && !this.isStart) {
         console.log('canvasMove')
-        let canvasX = e.offsetX - e.target.offsetLeft
-        let canvasY = e.offsetY - e.target.offsetTop
+        const canvasX = e.offsetX - e.target.offsetLeft
+        const canvasY = e.offsetY - e.target.offsetTop
+        let point = {
+          x: canvasX,
+          y: canvasY
+        }
+        this.pointList.push(point)
         this.context.lineTo(canvasX, canvasY)
         this.context.stroke()
       }
@@ -94,18 +120,86 @@ export default {
      * @param event actionEvent
      */
     canvasDown (event) {
-      if (this.isStart) {
-        this.isStart = false
-      }
-      this.canvasMoveUse = true
       // client是基于整个页面的坐标
       // offset是canvas距离顶部以及左边的距离
       const canvasX = event.offsetX - event.target.offsetLeft
       const canvasY = event.offsetY - event.target.offsetTop
+      if (this.isStart) {
+        this.startPoint = {
+          x: canvasX,
+          y: canvasY
+        }
+        this.pointList.push(this.startPoint)
+        this.isStart = false
+      }
+      this.canvasMoveUse = true
       this.setCanvasStyle()
       // 清除子路径
       this.context.beginPath()
       this.context.moveTo(canvasX, canvasY)
+    },
+    /**
+     * 判断是否连接成形状
+     * 若超过5笔还没合并，就当他不是形状了= =
+     */
+    isShape () {
+      if (this.lineList.length > 5) {
+        return false
+      } else {
+        return true
+      }
+    },
+    /**
+     * 判断图形是否封闭
+     * startX - 2 <= x <= startX + 2 则为可封闭
+     */
+    isClose (x, y) {
+      let startX = this.startPoint.x
+      let startY = this.startPoint.y
+      if (x >= startX - 5 && x <= startX + 5 && y >= startY - 5 && y <= startY + 5) {
+        return true
+      } else {
+        return false
+      }
+    },
+    /**
+     * 识别图形的形状
+     */
+    recognizeFigure () {
+      let sumOfLine = this.lineList.length
+      let shape = ''
+      switch (sumOfLine) {
+        case 1 : {
+          shape = 'Circle'
+          break
+        }
+        case 2 : {
+          shape = 'triangle'
+          break
+        }
+        case 3 : {
+          shape = 'rectangle'
+          break
+        }
+        case 4 : {
+          shape = 'pentagon'
+          break
+        }
+        default : {
+          shape = ''
+        }
+      }
+      // stroke text
+      this.context.font = '20px Chalk'
+      this.context.strokeText(shape, this.startPoint.x, this.startPoint.y)
+      const figure = {
+        shape: shape,
+        textPoint: this.startPoint,
+        color: this.color
+      }
+      this.figureList.push(figure)
+      // clear data
+      this.initData()
     },
     /**
      * 保存该图画
@@ -117,6 +211,16 @@ export default {
      */
     emptyCanvas () {
       this.context.clearRect(0, 0, 1000, 500)
+    },
+    /**
+     * 重新初始化数据
+     */
+    initData () {
+      // clear current Data
+      this.pointList = []
+      this.lineList = []
+      this.isStart = true
+      this.startPoint = {}
     }
   }
 }

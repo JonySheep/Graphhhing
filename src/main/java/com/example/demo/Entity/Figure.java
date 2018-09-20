@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Figure {
     private String shape; // 形状：如正方形、圆形、三角形等
-    private List<Integer> pointList; // 坐标点
+    private Point textPoint; // 显示标签的坐标点
     private String color; // 颜色
 
     // Constructor
-    public Figure(String shape, List<Integer> pointList, String color) {
+    public Figure(String shape, Point textPoint, String color) {
         this.shape = shape;
-        this.pointList = pointList;
+        this.textPoint = textPoint;
         this.color = color;
     }
 
@@ -18,8 +18,8 @@ public class Figure {
         return shape;
     }
 
-    public List<Integer> getPointList() {
-        return pointList;
+    public Point getTextPoint() {
+        return textPoint;
     }
 
     public String getColor() {
@@ -30,8 +30,8 @@ public class Figure {
         this.shape = shape;
     }
 
-    public void setPointList(List<Integer> pointList) {
-        this.pointList = pointList;
+    public void setTextPoint(Point textPoint) {
+        this.textPoint = textPoint;
     }
 
     public void setColor(String color) {

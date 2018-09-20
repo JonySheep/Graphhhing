@@ -42,8 +42,8 @@ export default {
         {
           content: 'picture6',
           key: 6
-        },
-      ],
+        }
+      ]
     }
   }
 }
