@@ -56,7 +56,8 @@ export default {
       pointList: [], // 点集
       lineList: [], // 线集
       startPoint: {}, // 开始点
-      figureList: [] // 识别的形状集合：需要post给后台
+      figureList: [], // 识别的形状集合：需要post给后台
+      counter: 1
     }
   },
   // 渲染时调用
@@ -214,6 +215,29 @@ export default {
      * 保存该图画
      */
     saveCanvas () {
+      let canvasUrl = this.thisCanvas.toDataURL(this.counter + '/png', 1.0)
+
+      let canvasFile = this.convertBase64UrlToBlob(canvasUrl, 'png')
+      this.postCanvas(canvasFile)
+    },
+    /**
+     * 将base64的url转换为blob的方法
+     */
+    convertBase64UrlToBlob (urlData, type) {
+      // 去掉url的头，并转换为byte
+      let bytes = window.atob(urlData.split(',')[1])
+      // 处理异常,将ascii码小于0的转换为大于0
+      let ab = new ArrayBuffer(bytes.length)
+      let ia = new Uint8Array(ab)
+      for (let i = 0; i < bytes.length; i++) {
+        ia[i] = bytes.charCodeAt(i)
+      }
+      return new Blob([ab], {type: (this.counter) + '.' + type})
+    },
+    /**
+     * 向后端发送数据
+     */
+    postCanvas (canvasFile) {
     },
     /**
      * 清空画布
