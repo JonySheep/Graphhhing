@@ -2,17 +2,26 @@
   <div>
     <div class="canvas-panel-container">
       <el-row>
-        <el-col :span="20" v-on:mousedown="beginPath">
-          <canvas id="canvas"
-                  height="500"
-                  width="1000"
-                  class="canvas-panel"
-                  v-on:mousedown="canvasDown"
-                  v-on:mouseup="canvasUp"
-                  v-on:mousemove="canvasMove"
-          ></canvas>
+        <el-col :span="20" >
+          <div v-on:mousedown="beginPath" style="width: 1000px; height: 500px">
+            <canvas id="canvas"
+                    height="500"
+                    width="1000"
+                    class="canvas-panel"
+                    v-on:mousedown="canvasDown"
+                    v-on:mouseup="canvasUp"
+                    v-on:mousemove="canvasMove"
+            ></canvas>
+          </div>
         </el-col>
         <el-col :span="4" class="tag-col">
+          <ul>
+            <li v-for="tagItem in figureList">
+              <el-tag type="danger"
+                      class="tag-style"
+              >{{tagItem.shape}}</el-tag>
+            </li>
+          </ul>
         </el-col>
       </el-row>
     </div>
@@ -211,6 +220,7 @@ export default {
      */
     emptyCanvas () {
       this.context.clearRect(0, 0, 1000, 500)
+      this.initData()
     },
     /**
      * 重新初始化数据
@@ -245,5 +255,8 @@ export default {
     border-right: coral 1px solid;
     position: absolute;
     cursor: crosshair;
+  }
+  .tag-style{
+    margin: 5px;
   }
 </style>

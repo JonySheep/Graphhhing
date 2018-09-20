@@ -1,9 +1,8 @@
 <template>
   <div>
-    <ul class="ul-style">
+    <ul">
       <li v-for="pic in canvasList"
-          v-bind:key="pic.key"
-          class="canvas-list">
+          v-bind:key="pic.key">
         <el-card class="picture-card"
                  shadow="hover"
         >
@@ -50,10 +49,10 @@ export default {
 </script>
 
 <style>
-  .ul-style{
+  ul{
     list-style: none;
   }
-  .canvas-list{
+  li{
     display: inline-block;
   }
   .picture-card{
