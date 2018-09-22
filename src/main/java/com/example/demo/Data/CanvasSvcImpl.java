@@ -1,7 +1,14 @@
 package com.example.demo.Data;
 
 import com.example.demo.Entity.Canvas;
+import com.example.demo.Entity.CanvasList;
 import com.example.demo.util.ResultMessageEnum;
+import com.google.gson.Gson;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
 
 public class CanvasSvcImpl implements CanvasSvc{
 
@@ -12,7 +19,23 @@ public class CanvasSvcImpl implements CanvasSvc{
      * @throws Exception
      */
     @Override
-    public Canvas getCanvas(int canvId) throws Exception {
+    public synchronized Canvas getCanvas(int canvId) throws Exception {
+        CanvasList canvasList = null;
+        String path = "/Users/yangyang/canvas.json";
+
+        String file = readFile(path);
+        Gson gson = new Gson();
+        canvasList = gson.fromJson(file, CanvasList.class);
+
+        if(canvasList.getCanvasList() != null) {
+            for(Canvas c : canvasList.getCanvasList()) {
+                if(c.getCanvasId() == canvId) {
+                    return c;
+                }
+            }
+        } else {
+            return null;
+        }
         return null;
     }
 
@@ -24,7 +47,57 @@ public class CanvasSvcImpl implements CanvasSvc{
      * @throws Exception
      */
     @Override
-    public ResultMessageEnum saveCanvas(int canvId, Canvas canvas) throws Exception {
-        return null;
+    public synchronized ResultMessageEnum saveCanvas(int canvId, Canvas canvas) throws Exception {
+        CanvasList canvasList = null;
+
+        String path = "/Users/yangyang/canvas.json";
+        String file = readFile(path);
+        Gson gson = new Gson();
+        canvasList = gson.fromJson(file, CanvasList.class);
+
+        if (canvasList.getCanvasList() != null) {
+            ResultMessageEnum res = canvasList.addCanvas(canvas);
+            if (res == ResultMessageEnum.SUCCESS) {
+                // write file
+                String jsonStr = gson.toJson(canvasList);
+                return writeFile(path, jsonStr);
+            } else {
+                return ResultMessageEnum.FAIL;
+            }
+        } else {
+            return ResultMessageEnum.FAIL;
+        }
+
+    }
+
+    /**
+     * 用来读取文件
+     * @param path 路径
+     * @return
+     * @throws Exception
+     */
+    private String readFile(String path) throws Exception {
+        String str = "";
+        BufferedReader reader = new BufferedReader(new FileReader(path));
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            str = str + line;
+        }
+        return str;
+    }
+
+    /**
+     * 用来写文件
+     * @param path 路径
+     * @param str 写内容
+     * @return
+     * @throws Exception
+     */
+    private ResultMessageEnum writeFile(String path, String str) throws Exception {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(path));
+        bw.write(str);
+        bw.close();
+        return ResultMessageEnum.SUCCESS;
     }
 }
+

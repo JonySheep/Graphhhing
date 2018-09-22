@@ -16,7 +16,8 @@
         </el-col>
         <el-col :span="4" class="tag-col">
           <ul>
-            <li v-for="tagItem in figureList">
+            <li v-for="tagItem in figureList"
+            >
               <el-tag type="danger"
                       class="tag-style"
               >{{tagItem.shape}}</el-tag>
@@ -238,6 +239,11 @@ export default {
      * 向后端发送数据
      */
     postCanvas (canvasFile) {
+      let form = new FormData()
+      form.append('canvas', canvasFile)
+      form.append('tags', JSON.stringify(this.figureList))
+
+      this.$api.post('canvas/' + this.counter)
     },
     /**
      * 清空画布

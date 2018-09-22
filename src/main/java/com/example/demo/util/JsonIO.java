@@ -1,6 +1,4 @@
 package com.example.demo.util;
-
-
 import com.example.demo.util.ResultMessageEnum;
 
 import java.io.*;
