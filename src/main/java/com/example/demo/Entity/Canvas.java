@@ -3,17 +3,17 @@ package com.example.demo.Entity;
 import java.util.List;
 
 public class Canvas {
-    private int canvasId;
+    private String canvasId;
     private String canvasUrl;
     private List<Figure> figureList;
 
-    public Canvas(int canvasId, String canvasUrl, List<Figure> figureList) {
+    public Canvas(String canvasId, String canvasUrl, List<Figure> figureList) {
         this.canvasId = canvasId;
         this.canvasUrl = canvasUrl;
         this.figureList = figureList;
     }
 
-    public void setCanvasId(int canvasId) {
+    public void setCanvasId(String canvasId) {
         this.canvasId = canvasId;
     }
 
@@ -25,7 +25,7 @@ public class Canvas {
         this.figureList = figureList;
     }
 
-    public int getCanvasId() {
+    public String getCanvasId() {
 
         return canvasId;
     }

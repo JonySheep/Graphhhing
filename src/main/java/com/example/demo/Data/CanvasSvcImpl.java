@@ -13,13 +13,33 @@ import java.io.FileWriter;
 public class CanvasSvcImpl implements CanvasSvc{
 
     /**
+     * 读取所有已存储的图片
+     * @return
+     * @throws Exception
+     */
+    public synchronized CanvasList getCanvasList() throws Exception {
+        CanvasList canvasList = null;
+        String path = "/Users/yangyang/canvas.json";
+
+        String file = readFile(path);
+        Gson gson = new Gson();
+        canvasList = gson.fromJson(file, CanvasList.class);
+
+        if(canvasList.getCanvasList() != null) {
+            return canvasList;
+        } else {
+            return null;
+        }
+    }
+
+    /**
      * 根据id得到这幅图片
      * @param canvId 图片id
      * @return
      * @throws Exception
      */
     @Override
-    public synchronized Canvas getCanvas(int canvId) throws Exception {
+    public synchronized Canvas getCanvas(String canvId) throws Exception {
         CanvasList canvasList = null;
         String path = "/Users/yangyang/canvas.json";
 
@@ -29,7 +49,7 @@ public class CanvasSvcImpl implements CanvasSvc{
 
         if(canvasList.getCanvasList() != null) {
             for(Canvas c : canvasList.getCanvasList()) {
-                if(c.getCanvasId() == canvId) {
+                if(c.getCanvasId() .equals(canvId) ) {
                     return c;
                 }
             }
@@ -47,23 +67,19 @@ public class CanvasSvcImpl implements CanvasSvc{
      * @throws Exception
      */
     @Override
-    public synchronized ResultMessageEnum saveCanvas(int canvId, Canvas canvas) throws Exception {
-        CanvasList canvasList = null;
+    public synchronized ResultMessageEnum saveCanvas(String canvId, Canvas canvas) throws Exception {
+        CanvasList canvasList = new CanvasList();
 
         String path = "/Users/yangyang/canvas.json";
         String file = readFile(path);
         Gson gson = new Gson();
         canvasList = gson.fromJson(file, CanvasList.class);
 
-        if (canvasList.getCanvasList() != null) {
-            ResultMessageEnum res = canvasList.addCanvas(canvas);
-            if (res == ResultMessageEnum.SUCCESS) {
-                // write file
-                String jsonStr = gson.toJson(canvasList);
-                return writeFile(path, jsonStr);
-            } else {
-                return ResultMessageEnum.FAIL;
-            }
+        ResultMessageEnum res = canvasList.addCanvas(canvas);
+        if (res == ResultMessageEnum.SUCCESS) {
+            // write file
+            String jsonStr = gson.toJson(canvasList);
+            return writeFile(path, jsonStr);
         } else {
             return ResultMessageEnum.FAIL;
         }

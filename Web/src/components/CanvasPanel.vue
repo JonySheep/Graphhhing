@@ -58,7 +58,7 @@ export default {
       lineList: [], // 线集
       startPoint: {}, // 开始点
       figureList: [], // 识别的形状集合：需要post给后台
-      counter: 1
+      counter: 2
     }
   },
   // 渲染时调用
@@ -241,9 +241,12 @@ export default {
     postCanvas (canvasFile) {
       let form = new FormData()
       form.append('canvas', canvasFile)
-      form.append('tags', JSON.stringify(this.figureList))
+      let figureListObject = {
+        figureList: this.figureList
+      }
+      form.append('figures', JSON.stringify(figureListObject))
 
-      this.$api.post('canvas/' + this.counter)
+      this.$api.post('canvas/' + this.counter, form)
     },
     /**
      * 清空画布

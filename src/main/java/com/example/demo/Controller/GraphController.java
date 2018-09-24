@@ -20,13 +20,29 @@ import java.util.Map;
 @CrossOrigin(origins = "http://localhost:8080")
 public class GraphController {
 
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public Object getCanvasList() {
+        Map<String,Object> map =new HashMap<>();
+        CanvasSvc svc = new CanvasSvcImpl();
+
+        try{
+            map.put("data",svc.getCanvasList());
+            map.put("success",true);
+        }
+        catch (Exception e){
+            map.put("data",e.getStackTrace());
+            map.put("success",false);
+        }
+        return map;
+    }
+
     /**
      * 根据id得到这幅图片
      * @param canvasId 图片id
      * @return
      */
     @RequestMapping(value = "/{canvas_id}", method = RequestMethod.GET)
-    public Object getCanvas(@PathVariable(value = "canvas_id") int canvasId){
+    public Object getCanvas(@PathVariable(value = "canvas_id") String canvasId){
         Map<String,Object> map =new HashMap<>();
         CanvasSvc svc = new CanvasSvcImpl();
 
@@ -42,19 +58,18 @@ public class GraphController {
     }
 
     @RequestMapping(value = "/{canvas_id}", method = RequestMethod.POST)
-    public Object saveCanvas(@PathVariable(value = "canvas_Id") int canvasId,
+    public Object saveCanvas(@PathVariable(value = "canvas_id") String canvasId,
                              @RequestParam(value = "canvas") MultipartFile canvasPic,
                              @RequestParam(value = "figures") String figureList){
 
         Map<String, Object> map = new HashMap<>();
-        String path = "src/assets/" + canvasId + ".png";
+        String path = "Web/static/assets/" + canvasId + ".png";
 
         Gson gson = new Gson();
         FigureList figureListClass = gson.fromJson(figureList, FigureList.class);
 
-        Canvas postedCanvas = new Canvas(canvasId, path, figureListClass.getFigureList());
-
-        postedCanvas.setCanvasUrl(path);
+        String savedUrl = "../../static/assets/" + canvasId + ".png";
+        Canvas postedCanvas = new Canvas(canvasId, savedUrl, figureListClass.getFigureList());
 
         File newFile = new File(path);
         if (newFile.exists()) {

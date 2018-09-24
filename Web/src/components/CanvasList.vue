@@ -1,12 +1,12 @@
 <template>
   <div>
-    <ul">
+    <ul>
       <li v-for="pic in canvasList"
-          v-bind:key="pic.key">
+          v-bind:key="pic.canvasId">
         <el-card class="picture-card"
                  shadow="hover"
         >
-          <p>{{pic.content}}</p>
+          <img :src="pic.canvasUrl" width="250" height="125"/>
         </el-card>
       </li>
     </ul>
@@ -17,32 +17,20 @@
 export default {
   data () {
     return {
-      canvasList: [
-        {
-          content: 'picture1',
-          key: 1
-        },
-        {
-          content: 'picture2',
-          key: 2
-        },
-        {
-          content: 'picture3',
-          key: 3
-        },
-        {
-          content: 'picture4',
-          key: 4
-        },
-        {
-          content: 'picture5',
-          key: 5
-        },
-        {
-          content: 'picture6',
-          key: 6
-        }
-      ]
+      canvasList: []
+    }
+  },
+
+  mounted() {
+    this.getCanvasList()
+  },
+
+  methods: {
+    getCanvasList() {
+      let _this = this;
+      this.$api.get('canvas', null, res => {
+        _this.canvasList = res.data.canvasList
+      })
     }
   }
 }
@@ -54,10 +42,10 @@ export default {
   }
   li{
     display: inline-block;
+    padding: 0px;
   }
   .picture-card{
     width: 250px;
     margin: 20px;
-    height: 125px;
   }
 </style>
