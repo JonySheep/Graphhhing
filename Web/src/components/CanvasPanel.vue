@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-card class="canvas-container">
     <div class="canvas-panel-container">
       <el-row>
         <el-col :span="20" >
@@ -42,10 +43,16 @@
         </el-col>
       </el-row>
     </div>
+    </el-card>
+    <div class="list-container">
+      <CanvasList :refreshFlag="flag"></CanvasList>
+    </div>
   </div>
 </template>
 
 <script>
+  import CanvasList from '../components/CanvasList'
+
 export default {
   data () {
     return {
@@ -58,8 +65,12 @@ export default {
       lineList: [], // 线集
       startPoint: {}, // 开始点
       figureList: [], // 识别的形状集合：需要post给后台
-      counter: 2
+      counter: 3,
+      flag: false,
     }
+  },
+  components: {
+    CanvasList
   },
   // 渲染时调用
   mounted () {
@@ -247,6 +258,7 @@ export default {
       form.append('figures', JSON.stringify(figureListObject))
 
       this.$api.post('canvas/' + this.counter, form)
+      this.flag = true
     },
     /**
      * 清空画布
@@ -291,5 +303,13 @@ export default {
   }
   .tag-style{
     margin: 5px;
+  }
+
+  .list-container {
+    margin-top: 100px;
+  }
+  .canvas-container{
+    height:620px;
+    background-color: white;
   }
 </style>

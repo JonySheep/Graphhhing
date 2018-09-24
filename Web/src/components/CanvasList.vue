@@ -21,8 +21,11 @@ export default {
     }
   },
 
+  props: ['refreshFlag'],
+
   mounted() {
     this.getCanvasList()
+    window.setInterval(this.checkFlag, 1000)
   },
 
   methods: {
@@ -31,6 +34,12 @@ export default {
       this.$api.get('canvas', null, res => {
         _this.canvasList = res.data.canvasList
       })
+    },
+
+    checkFlag() {
+      if (this.refreshFlag) {
+        this.getCanvasList()
+      }
     }
   }
 }

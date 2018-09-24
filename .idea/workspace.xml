@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af72572d-ae5f-4f11-b072-18ad5a6d0621" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Web/static/assets/0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Web/static/assets/1.png" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/annotation-processors.bin" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/annotation-processors.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/fileContent.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/resourceHashesCache.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Web/config/index.js" afterPath="$PROJECT_DIR$/Web/config/index.js" />
       <change beforePath="$PROJECT_DIR$/Web/src/components/CanvasList.vue" afterPath="$PROJECT_DIR$/Web/src/components/CanvasList.vue" />
       <change beforePath="$PROJECT_DIR$/Web/src/components/CanvasPanel.vue" afterPath="$PROJECT_DIR$/Web/src/components/CanvasPanel.vue" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Controller/GraphController.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Controller/GraphController.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Data/CanvasSvc.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Data/CanvasSvc.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Data/CanvasSvcImpl.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Data/CanvasSvcImpl.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Entity/Canvas.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Entity/Canvas.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Entity/CanvasList.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Entity/CanvasList.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Entity/FigureList.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Entity/FigureList.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Entity/Point.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Entity/Point.class" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvc.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvc.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Canvas.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Canvas.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/CanvasList.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/CanvasList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/FigureList.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/FigureList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Point.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Point.java" />
+      <change beforePath="$PROJECT_DIR$/Web/src/pages/GraphPage.vue" afterPath="$PROJECT_DIR$/Web/src/pages/GraphPage.vue" />
+      <change beforePath="$PROJECT_DIR$/Web/static/assets/2.png" afterPath="$PROJECT_DIR$/Web/static/assets/2.png" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -91,11 +66,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CanvasPanel.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CanvasPanel.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasPanel.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="180">
+              <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -104,19 +79,21 @@
       <file leaf-file-name="CanvasList.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasList.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="238">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java">
+      <file leaf-file-name="GraphPage.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/src/pages/GraphPage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="15">
+              <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+              <folding>
+                <element signature="e#104#137#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,6 +114,7 @@
       <find>&quot;</find>
       <find>clear</find>
       <find>save</find>
+      <find>sa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -572,7 +550,6 @@
         <option value="$PROJECT_DIR$/Web/src/styles/element-variables.scss" />
         <option value="$PROJECT_DIR$/Web/src/App.vue" />
         <option value="$PROJECT_DIR$/Web/src/router/index.js" />
-        <option value="$PROJECT_DIR$/Web/src/pages/GraphPage.vue" />
         <option value="$PROJECT_DIR$/Web/src/styles/background.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Figure.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/util/ResultMessageEnum.java" />
@@ -589,10 +566,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvc.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Point.java" />
-        <option value="$PROJECT_DIR$/Web/src/components/CanvasPanel.vue" />
         <option value="$PROJECT_DIR$/Web/config/index.js" />
-        <option value="$PROJECT_DIR$/Web/src/components/CanvasList.vue" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java" />
+        <option value="$PROJECT_DIR$/Web/src/pages/GraphPage.vue" />
+        <option value="$PROJECT_DIR$/Web/src/components/CanvasPanel.vue" />
+        <option value="$PROJECT_DIR$/Web/src/components/CanvasList.vue" />
       </list>
     </option>
   </component>
@@ -613,9 +591,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="54" />
-    <option name="y" value="161" />
+    <option name="y" value="151" />
     <option name="width" value="1386" />
-    <option name="height" value="739" />
+    <option name="height" value="749" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -741,6 +719,20 @@
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graphhhing" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graphhhing" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -1019,12 +1011,12 @@
       <workItem from="1537198390212" duration="133000" />
       <workItem from="1537232525102" duration="9501000" />
       <workItem from="1537321752688" duration="30517000" />
-      <workItem from="1537602030474" duration="15102000" />
+      <workItem from="1537602030474" duration="18131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55253000" />
+    <option name="totallyTimeSpent" value="58282000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1036,7 +1028,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="161" width="1386" height="739" extended-state="0" />
+    <frame x="54" y="151" width="1386" height="749" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1157,7 +1149,7 @@
         <state relative-caret-position="60">
           <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
           <folding>
-            <element signature="e#234#267#0" expanded="false" />
+            <element signature="e#104#137#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1219,16 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/pages/GraphPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-          <folding>
-            <element signature="e#234#267#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1451,26 +1433,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasPanel.vue">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        <state relative-caret-position="508">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/pages/GraphPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding>
+            <element signature="e#104#137#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="238">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java">
+    <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasPanel.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+        <state relative-caret-position="180">
+          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
           <folding />
         </state>
       </provider>
