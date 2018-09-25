@@ -29,10 +29,13 @@
     </div>
     <div class="operator">
       <el-row>
+        <el-col :span="15">
+          <el-button type="danger" @click="newCanvas()">Start a new pic</el-button>
+        </el-col>
         <el-col :span="3">
           <p class="prompt-font">Color Picker</p>
         </el-col>
-        <el-col :span="17" >
+        <el-col :span="2" >
           <el-color-picker v-model="color"></el-color-picker>
         </el-col>
         <el-col :span="2">
@@ -45,7 +48,9 @@
     </div>
     </el-card>
     <div class="list-container">
-      <CanvasList :refreshFlag="flag"></CanvasList>
+      <CanvasList :refreshFlag="flag"
+                  @openPic="setCounter"
+      ></CanvasList>
     </div>
   </div>
 </template>
@@ -65,8 +70,9 @@ export default {
       lineList: [], // 线集
       startPoint: {}, // 开始点
       figureList: [], // 识别的形状集合：需要post给后台
-      counter: 3,
+      counter: 1,
       flag: false,
+      disable: false, // 是否能在画布上绘画
     }
   },
   components: {
@@ -77,13 +83,29 @@ export default {
     this.thisCanvas = document.getElementById('canvas')
     this.context = this.thisCanvas.getContext('2d')
     this.setCanvasStyle()
+    this.getReadOnlyCanvas(1)
   },
   methods: {
+    /**
+     * 创建一个新的绘图
+     */
+    newCanvas () {
+      this.emptyCanvas()
+      let _this = this
+      this.$api.get('/canvas', null, res => {
+        _this.counter = res.data.canvasList.length + 1
+      })
+      _this.disable = false
+      this.figureList = []
+    },
     /**
      * 设置绘画配置
      */
     setCanvasStyle () {
       this.context.strokeStyle = this.color
+    },
+    setCounter (canvasId) {
+      this.getReadOnlyCanvas(canvasId)
     },
     /**
      * 绘图开始
@@ -91,7 +113,7 @@ export default {
      */
     beginPath (event) {
       const canvas = document.querySelector('#canvas')
-      if (event.target !== canvas) {
+      if (event.target !== canvas ) {
         this.context.beginPath()
       }
     },
@@ -142,6 +164,9 @@ export default {
      * @param event actionEvent
      */
     canvasDown (event) {
+      if(this.disable) {
+        return
+      }
       // client是基于整个页面的坐标
       // offset是canvas距离顶部以及左边的距离
       const canvasX = event.offsetX - event.target.offsetLeft
@@ -219,6 +244,7 @@ export default {
         textPoint: this.startPoint,
         color: this.color
       }
+      console.log("this!!!!")
       this.figureList.push(figure)
       // clear data
       this.initData()
@@ -259,6 +285,7 @@ export default {
 
       this.$api.post('canvas/' + this.counter, form)
       this.flag = true
+
     },
     /**
      * 清空画布
@@ -276,6 +303,21 @@ export default {
       this.lineList = []
       this.isStart = true
       this.startPoint = {}
+      this.flag = false
+    },
+    /**
+     * 读取图片和标签进行查看
+     */
+    getReadOnlyCanvas (counter) {
+      let _this = this
+      this.$api.get('/canvas/' + counter, null, res => {
+        let img = new Image()
+        img.src = res.data.canvasUrl
+        _this.emptyCanvas()
+        _this.context.drawImage(img, 0, 0, 1000, 500)
+        _this.figureList = res.data.figureList
+        _this.disable = true
+      })
     }
   }
 }

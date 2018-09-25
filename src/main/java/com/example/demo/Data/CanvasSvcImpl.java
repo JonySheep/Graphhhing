@@ -19,7 +19,7 @@ public class CanvasSvcImpl implements CanvasSvc{
      */
     public synchronized CanvasList getCanvasList() throws Exception {
         CanvasList canvasList = null;
-        String path = "/Users/yangyang/canvas.json";
+        String path = "Web/static/assets/canvas.json";
 
         String file = readFile(path);
         Gson gson = new Gson();
@@ -41,7 +41,7 @@ public class CanvasSvcImpl implements CanvasSvc{
     @Override
     public synchronized Canvas getCanvas(String canvId) throws Exception {
         CanvasList canvasList = null;
-        String path = "/Users/yangyang/canvas.json";
+        String path = "Web/static/assets/canvas.json";
 
         String file = readFile(path);
         Gson gson = new Gson();
@@ -70,7 +70,7 @@ public class CanvasSvcImpl implements CanvasSvc{
     public synchronized ResultMessageEnum saveCanvas(String canvId, Canvas canvas) throws Exception {
         CanvasList canvasList = new CanvasList();
 
-        String path = "/Users/yangyang/canvas.json";
+        String path = "Web/static/assets/canvas.json";
         String file = readFile(path);
         Gson gson = new Gson();
         canvasList = gson.fromJson(file, CanvasList.class);

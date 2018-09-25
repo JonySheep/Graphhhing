@@ -1,7 +1,7 @@
 .back-ground {
-  background-image: url("../assets/background.jpg") ;
+  background-image: url("../assets/background.jpg");
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.8;
   width: 89%;
   height: 100%;
   padding-left: 80px;

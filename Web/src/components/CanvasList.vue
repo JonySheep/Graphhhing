@@ -6,7 +6,11 @@
         <el-card class="picture-card"
                  shadow="hover"
         >
-          <img :src="pic.canvasUrl" width="250" height="125"/>
+          <img :src="pic.canvasUrl" width="220" height="110"/>
+          <el-button type="text"
+                     style="margin: 0px"
+                     @click="openPic(pic.canvasId)"
+          >Picture {{pic.canvasId}}</el-button>
         </el-card>
       </li>
     </ul>
@@ -29,6 +33,9 @@ export default {
   },
 
   methods: {
+    /**
+     * 得到图片列表
+     */
     getCanvasList() {
       let _this = this;
       this.$api.get('canvas', null, res => {
@@ -36,10 +43,21 @@ export default {
       })
     },
 
+    /**
+     * 用来实时刷新，实现保存后实时展示
+     */
     checkFlag() {
       if (this.refreshFlag) {
         this.getCanvasList()
       }
+    },
+
+    /**
+     * 向父组件传递消息，展示一张图片
+     * @param id
+     */
+    openPic (id) {
+      this.$emit('openPic', id)
     }
   }
 }
@@ -56,5 +74,7 @@ export default {
   .picture-card{
     width: 250px;
     margin: 20px;
+    text-align: center;
+    padding: 0px;
   }
 </style>

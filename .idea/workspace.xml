@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af72572d-ae5f-4f11-b072-18ad5a6d0621" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/fileContent.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Users/yangyang/大三上/项目/Graphhhing/Web/static/assets/2.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Web/src/components/CanvasList.vue" afterPath="$PROJECT_DIR$/Web/src/components/CanvasList.vue" />
       <change beforePath="$PROJECT_DIR$/Web/src/components/CanvasPanel.vue" afterPath="$PROJECT_DIR$/Web/src/components/CanvasPanel.vue" />
-      <change beforePath="$PROJECT_DIR$/Web/src/pages/GraphPage.vue" afterPath="$PROJECT_DIR$/Web/src/pages/GraphPage.vue" />
-      <change beforePath="$PROJECT_DIR$/Web/static/assets/2.png" afterPath="$PROJECT_DIR$/Web/static/assets/2.png" />
+      <change beforePath="$PROJECT_DIR$/Web/src/styles/background.css" afterPath="$PROJECT_DIR$/Web/src/styles/background.css" />
+      <change beforePath="$PROJECT_DIR$/Web/static/assets/0.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Web/static/assets/2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Web/static/assets/3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Data/CanvasSvcImpl.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/Data/CanvasSvcImpl.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -66,22 +78,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CanvasPanel.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CanvasPanel.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasPanel.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            <state relative-caret-position="970">
+              <caret line="86" column="4" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CanvasList.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CanvasList.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasList.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="69">
+              <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+              <folding>
+                <element signature="n#style#0;n#el-button#0;n#el-card#0;n#li#0;n#ul#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,6 +108,36 @@
               <folding>
                 <element signature="e#104#137#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-255">
+              <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CanvasSvcImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="108" column="14" lean-forward="false" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/src/styles/background.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,6 +159,7 @@
       <find>clear</find>
       <find>save</find>
       <find>sa</find>
+      <find>empty</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -550,7 +595,6 @@
         <option value="$PROJECT_DIR$/Web/src/styles/element-variables.scss" />
         <option value="$PROJECT_DIR$/Web/src/App.vue" />
         <option value="$PROJECT_DIR$/Web/src/router/index.js" />
-        <option value="$PROJECT_DIR$/Web/src/styles/background.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Figure.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/util/ResultMessageEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/util/JsonIO.java" />
@@ -564,11 +608,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/FigureList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/CanvasList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Point.java" />
         <option value="$PROJECT_DIR$/Web/config/index.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java" />
         <option value="$PROJECT_DIR$/Web/src/pages/GraphPage.vue" />
+        <option value="$PROJECT_DIR$/Web/src/styles/background.css" />
+        <option value="$PROJECT_DIR$/Web/static/assets/canvas.json" />
         <option value="$PROJECT_DIR$/Web/src/components/CanvasPanel.vue" />
         <option value="$PROJECT_DIR$/Web/src/components/CanvasList.vue" />
       </list>
@@ -590,10 +636,10 @@
     <handled-path value="$PROJECT_DIR$/Web/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="151" />
-    <option name="width" value="1386" />
-    <option name="height" value="749" />
+    <option name="x" value="53" />
+    <option name="y" value="461" />
+    <option name="width" value="1387" />
+    <option name="height" value="439" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -688,6 +734,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graphhhing" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -1011,12 +1066,12 @@
       <workItem from="1537198390212" duration="133000" />
       <workItem from="1537232525102" duration="9501000" />
       <workItem from="1537321752688" duration="30517000" />
-      <workItem from="1537602030474" duration="18131000" />
+      <workItem from="1537602030474" duration="23209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58282000" />
+    <option name="totallyTimeSpent" value="63360000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1028,7 +1083,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="151" width="1386" height="749" extended-state="0" />
+    <frame x="53" y="461" width="1387" height="439" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1046,11 +1101,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49740162" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7282609" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26181355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16815476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16802974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19064328" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1158,6 +1213,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,13 +1260,6 @@
         <state relative-caret-position="45">
           <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/styles/background.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1417,14 +1466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1433,10 +1474,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web/static/assets/3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Data/CanvasSvcImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="108" column="14" lean-forward="false" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GraphController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="-255">
+          <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1451,19 +1505,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasList.vue">
+    <entry file="file://$PROJECT_DIR$/Web/static/assets/canvas.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="710" lean-forward="false" selection-start-line="0" selection-start-column="710" selection-end-line="0" selection-end-column="710" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/styles/background.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasPanel.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state relative-caret-position="970">
+          <caret line="86" column="4" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/components/CanvasList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#el-button#0;n#el-card#0;n#li#0;n#ul#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
