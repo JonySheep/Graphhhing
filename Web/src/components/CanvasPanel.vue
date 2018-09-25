@@ -283,8 +283,13 @@ export default {
       }
       form.append('figures', JSON.stringify(figureListObject))
 
-      this.$api.post('canvas/' + this.counter, form)
-      this.flag = true
+      let _this = this
+      this.$api.post('canvas/' + this.counter, form, res => {
+        if (res.success) {
+          _this.flag = true
+          _this.$message('保存成功')
+        }
+      })
 
     },
     /**

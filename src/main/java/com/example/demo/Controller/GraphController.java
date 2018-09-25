@@ -2,17 +2,13 @@ package com.example.demo.Controller;
 import com.example.demo.Data.CanvasSvc;
 import com.example.demo.Data.CanvasSvcImpl;
 import com.example.demo.Entity.Canvas;
-import com.example.demo.Entity.Figure;
 import com.example.demo.Entity.FigureList;
-import com.example.demo.util.ResultMessageEnum;
 import com.google.gson.Gson;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import com.example.demo.util.ResultMessageEnum;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -57,41 +53,30 @@ public class GraphController {
         return map;
     }
 
+    /**
+     * 存储一幅绘图
+     * @param canvasId 绘图id，由前端生成
+     * @param canvasPic 图片文件
+     * @param figureList 形状标签列表
+     * @return
+     */
     @RequestMapping(value = "/{canvas_id}", method = RequestMethod.POST)
     public Object saveCanvas(@PathVariable(value = "canvas_id") String canvasId,
                              @RequestParam(value = "canvas") MultipartFile canvasPic,
                              @RequestParam(value = "figures") String figureList){
 
         Map<String, Object> map = new HashMap<>();
-        String path = "Web/static/assets/" + canvasId + ".png";
 
+        // 创建一个canvas类
         Gson gson = new Gson();
         FigureList figureListClass = gson.fromJson(figureList, FigureList.class);
-
         String savedUrl = "../../static/assets/" + canvasId + ".png";
         Canvas postedCanvas = new Canvas(canvasId, savedUrl, figureListClass.getFigureList());
 
-        File newFile = new File(path);
-        if (newFile.exists()) {
-            newFile.delete();
-        }
-        newFile = new File(path);
-
-        try {
-            if(newFile.getParent() != null && !new File(newFile.getParent()).exists()) {
-                new File(newFile.getParent()).mkdirs();
-            }
-            newFile.createNewFile();
-            canvasPic.transferTo(new File(newFile.getAbsolutePath()));
-        } catch (IOException e) {
-            e.printStackTrace();
-            map.put("success", false);
-            map.put("data", e.getStackTrace());
-        }
 
         CanvasSvc svc = new CanvasSvcImpl();
         try {
-            ResultMessageEnum result = svc.saveCanvas(canvasId, postedCanvas);
+            ResultMessageEnum result = svc.saveCanvas(canvasId, postedCanvas, canvasPic);
             map.put("success", true);
             map.put("data", result);
         } catch (Exception e) {

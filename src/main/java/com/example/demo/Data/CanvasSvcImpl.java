@@ -2,15 +2,13 @@ package com.example.demo.Data;
 
 import com.example.demo.Entity.Canvas;
 import com.example.demo.Entity.CanvasList;
-import com.example.demo.util.ResultMessageEnum;
 import com.google.gson.Gson;
+import org.springframework.web.multipart.MultipartFile;
+import com.example.demo.util.ResultMessageEnum;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 
-public class CanvasSvcImpl implements CanvasSvc{
+public class CanvasSvcImpl implements CanvasSvc {
 
     /**
      * 读取所有已存储的图片
@@ -67,7 +65,27 @@ public class CanvasSvcImpl implements CanvasSvc{
      * @throws Exception
      */
     @Override
-    public synchronized ResultMessageEnum saveCanvas(String canvId, Canvas canvas) throws Exception {
+    public synchronized ResultMessageEnum saveCanvas(String canvId, Canvas canvas, MultipartFile canvasPic) throws Exception {
+
+        // 存储图片
+        String picPath = "Web/static/assets/" + canvId + ".png";
+        File newFile = new File(picPath);
+        if (newFile.exists()) {
+            newFile.delete();
+        }
+        newFile = new File(picPath);
+
+        try {
+            if(newFile.getParent() != null && !new File(newFile.getParent()).exists()) {
+                new File(newFile.getParent()).mkdirs();
+            }
+            newFile.createNewFile();
+            canvasPic.transferTo(new File(newFile.getAbsolutePath()));
+        } catch (IOException e) {
+            return ResultMessageEnum.FAIL;
+        }
+
+        // 存储文件
         CanvasList canvasList = new CanvasList();
 
         String path = "Web/static/assets/canvas.json";

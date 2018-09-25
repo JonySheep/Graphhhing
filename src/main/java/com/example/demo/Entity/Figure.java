@@ -1,7 +1,5 @@
 package com.example.demo.Entity;
 
-import java.util.List;
-
 public class Figure {
     private String shape; // 形状：如正方形、圆形、三角形等
     private Point textPoint; // 显示标签的坐标点
