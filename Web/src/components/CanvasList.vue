@@ -49,6 +49,7 @@ export default {
     checkFlag() {
       if (this.refreshFlag) {
         this.getCanvasList()
+        this.refreshFlag = false
       }
     },
 

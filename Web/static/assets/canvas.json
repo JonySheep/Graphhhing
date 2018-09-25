@@ -1,1 +1,144 @@
-{"canvasList":[{"canvasId":"1","canvasUrl":"../../static/assets/1.png","figureList":[{"shape":"Circle","textPoint":{"x":568,"y":185},"color":"#ff7c76"}]},{"canvasId":"2","canvasUrl":"../../static/assets/2.png","figureList":[{"shape":"Circle","textPoint":{"x":302,"y":137},"color":"#ff7c76"},{"shape":"triangle","textPoint":{"x":153,"y":46},"color":"#ff7c76"},{"shape":"rectangle","textPoint":{"x":599,"y":67},"color":"#ff7c76"}]},{"canvasId":"3","canvasUrl":"../../static/assets/3.png","figureList":[{"shape":"rectangle","textPoint":{"x":165,"y":49},"color":"#170D0D"},{"shape":"triangle","textPoint":{"x":362,"y":100},"color":"#170D0D"},{"shape":"triangle","textPoint":{"x":462,"y":172},"color":"#170D0D"}]},{"canvasId":"4","canvasUrl":"../../static/assets/4.png","figureList":[{"shape":"triangle","textPoint":{"x":171,"y":85},"color":"#ff7c76"}]}]}
+{
+  "canvasList": [
+    {
+      "canvasId": "1",
+      "canvasUrl": "../../static/assets/1.png",
+      "figureList": [
+        {
+          "shape": "Circle",
+          "textPoint": {
+            "x": 568,
+            "y": 185
+          },
+          "color": "#ff7c76"
+        }
+      ]
+    },
+    {
+      "canvasId": "2",
+      "canvasUrl": "../../static/assets/2.png",
+      "figureList": [
+        {
+          "shape": "Circle",
+          "textPoint": {
+            "x": 302,
+            "y": 137
+          },
+          "color": "#ff7c76"
+        },
+        {
+          "shape": "triangle",
+          "textPoint": {
+            "x": 153,
+            "y": 46
+          },
+          "color": "#ff7c76"
+        },
+        {
+          "shape": "rectangle",
+          "textPoint": {
+            "x": 599,
+            "y": 67
+          },
+          "color": "#ff7c76"
+        }
+      ]
+    },
+    {
+      "canvasId": "3",
+      "canvasUrl": "../../static/assets/3.png",
+      "figureList": [
+        {
+          "shape": "rectangle",
+          "textPoint": {
+            "x": 165,
+            "y": 49
+          },
+          "color": "#170D0D"
+        },
+        {
+          "shape": "triangle",
+          "textPoint": {
+            "x": 362,
+            "y": 100
+          },
+          "color": "#170D0D"
+        },
+        {
+          "shape": "triangle",
+          "textPoint": {
+            "x": 462,
+            "y": 172
+          },
+          "color": "#170D0D"
+        }
+      ]
+    },
+    {
+      "canvasId": "4",
+      "canvasUrl": "../../static/assets/4.png",
+      "figureList": [
+        {
+          "shape": "triangle",
+          "textPoint": {
+            "x": 171,
+            "y": 85
+          },
+          "color": "#ff7c76"
+        }
+      ]
+    },
+    {
+      "canvasId": "5",
+      "canvasUrl": "../../static/assets/5.png",
+      "figureList": [
+        {
+          "shape": "Circle",
+          "textPoint": {
+            "x": 433,
+            "y": 223
+          },
+          "color": "#ff7c76"
+        },
+        {
+          "shape": "triangle",
+          "textPoint": {
+            "x": 811,
+            "y": 255
+          },
+          "color": "#ff7c76"
+        },
+        {
+          "shape": "rectangle",
+          "textPoint": {
+            "x": 99,
+            "y": 253
+          },
+          "color": "#ff7c76"
+        }
+      ]
+    },
+    {
+      "canvasId": "6",
+      "canvasUrl": "../../static/assets/6.png",
+      "figureList": [
+        {
+          "shape": "Circle",
+          "textPoint": {
+            "x": 374,
+            "y": 146
+          },
+          "color": "#ff7c76"
+        },
+        {
+          "shape": "rectangle",
+          "textPoint": {
+            "x": 683,
+            "y": 160
+          },
+          "color": "#ff7c76"
+        }
+      ]
+    }
+  ]
+}
