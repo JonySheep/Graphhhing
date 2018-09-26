@@ -308,6 +308,7 @@ export default {
     emptyCanvas () {
       this.context.clearRect(0, 0, 1000, 500)
       this.initData()
+      this.figureList = []
     },
     /**
      * 重新初始化数据
