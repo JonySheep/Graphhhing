@@ -66,9 +66,11 @@ export default {
       thisCanvas: {},
       canvasMoveUse: false, // 是否正在画图
       isStart: true, // 是否是开始画图
+      isShape: true, // 是否在画几何图形过程中，判断标准是上一条线的终点与下一条线的起点重合
       pointList: [], // 点集
       lineList: [], // 线集
       startPoint: {}, // 开始点
+      lastPoint: {}, // 结束点
       figureList: [], // 识别的形状集合：需要post给后台
       counter: 1,
       flag: false,
@@ -124,17 +126,29 @@ export default {
     canvasUp (e) {
       const canvasX = e.offsetX - e.target.offsetLeft
       const canvasY = e.offsetY - e.target.offsetTop
+      this.lastPoint = {
+        x: canvasX,
+        y: canvasY
+      }
+      console.log(this)
       this.canvasMoveUse = false
       if (!this.isStart) {
         // 不是第一条线，需判断是否能组成形状
         if (this.isShape) {
           this.lineList.push(this.pointList)
           // 判断是否可封闭
-          if (this.isClose(canvasX, canvasY)) {
+          if (this.isConnect(this.startPoint.x, this.startPoint.y, canvasX, canvasY)) {
             this.recognizeFigure()
           }
         } else {
+          let tempPointList = this.pointList
           this.initData()
+          this.isStart = false
+          this.lineList.push(tempPointList)
+          this.startPoint = {
+            x: this.lineList[0][0].x,
+            y: this.lineList[0][0].y
+          }
         }
       } else {
         // 第一条线，直接加入线段集合
@@ -169,8 +183,10 @@ export default {
       }
       // client是基于整个页面的坐标
       // offset是canvas距离顶部以及左边的距离
+
       const canvasX = event.offsetX - event.target.offsetLeft
       const canvasY = event.offsetY - event.target.offsetTop
+      console.log("canvasDown  " + canvasX +"  " + canvasY)
       if (this.isStart) {
         this.startPoint = {
           x: canvasX,
@@ -178,6 +194,14 @@ export default {
         }
         this.pointList.push(this.startPoint)
         this.isStart = false
+      } else {
+        // 若不是起始点，判断是否与上一条线相连
+        if (this.isConnect(this.lastPoint.x, this.lastPoint.y, canvasX, canvasY)) {
+          this.isShape = true
+        } else {
+          this.isShape = false
+        }
+        this.pointList = []
       }
       this.canvasMoveUse = true
       this.setCanvasStyle()
@@ -186,24 +210,11 @@ export default {
       this.context.moveTo(canvasX, canvasY)
     },
     /**
-     * 判断是否连接成形状
-     * 若超过5笔还没合并，就当他不是形状了= =
-     */
-    isShape () {
-      if (this.lineList.length > 5) {
-        return false
-      } else {
-        return true
-      }
-    },
-    /**
-     * 判断图形是否封闭
+     * 判断两点是否连接
      * startX - 2 <= x <= startX + 2 则为可封闭
      */
-    isClose (x, y) {
-      let startX = this.startPoint.x
-      let startY = this.startPoint.y
-      if (x >= startX - 5 && x <= startX + 5 && y >= startY - 5 && y <= startY + 5) {
+    isConnect (stdX, stdY, x, y) {
+      if (x >= stdX - 5 && x <= stdX + 5 && y >= stdY - 5 && y <= stdY + 5) {
         return true
       } else {
         return false
@@ -244,7 +255,6 @@ export default {
         textPoint: this.startPoint,
         color: this.color
       }
-      console.log("this!!!!")
       this.figureList.push(figure)
       // clear data
       this.initData()
